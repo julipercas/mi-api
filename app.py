@@ -5,6 +5,10 @@ app = Flask(__name__)
 
 from rehabilitadores import rehabilitadores
 
+@app.route("/")
+def saludo():
+    print("Bienvenido a mi API REST")
+
 @app.route('/ping')
 def ping():
     return jsonify({"Message": "Pong!"})
